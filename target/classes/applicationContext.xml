@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--<bean id="add" class="com.spring.spring_core.model.Address">
+		<property name="city" value="GZB"/>
+		<property name="state" value="UP"/>
+		<property name="country" value="India"/>
+		<property name="pinCode" value="202020"/>
+		
+	</bean>
+	
+	<bean id="emp" class="com.spring.spring_core.model.Employee">
+		<property name="name" value="Alok"/>
+		<property name="gender" value="Male"/>
+		<property name="address" ref="add"/>
+				
+	</bean>-->
+	
+	<bean id="add2" class="com.spring.spring_core.model.Address">
+		<constructor-arg name="city" value="Amroha"/>
+		<constructor-arg name="state" value="UP"/>
+		<constructor-arg name="country" value="INDIA"/>
+		<constructor-arg name="pinCode" value="221303"/>
+		
+	</bean>
+	
+	<bean id="emp2" class="com.spring.spring_core.model.Employee">
+		<constructor-arg name="name" value="Alok"/>
+		<constructor-arg name="gender" value="Male"/>
+		<constructor-arg name="address" ref="add2"/>
+		
+		</bean>
+	
+	
+	
+</beans>
