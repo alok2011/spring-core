@@ -4,6 +4,9 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+                 <!--dependency injection by setters-->
+
     <!-- bean definitions here -->
     <!--<bean id="add" class="com.spring.spring_core.model.Address">
 		<property name="city" value="GZB"/>
@@ -19,6 +22,9 @@
 		<property name="address" ref="add"/>
 				
 	</bean>-->
+	
+	
+	<!--dependency injection by Constructor-->
 	
 	<bean id="add2" class="com.spring.spring_core.model.Address">
 		<constructor-arg name="city" value="Amroha"/>

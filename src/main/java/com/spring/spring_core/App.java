@@ -15,6 +15,7 @@ public class App
 		Employee add = ioc.getBean(Employee.class, "emp2");
 		add.setName("Aalok");
 		System.out.println(add);
+		
 	}
 
 }
