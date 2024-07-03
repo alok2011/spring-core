@@ -15,6 +15,9 @@ public class App
 		Employee add = ioc.getBean(Employee.class, "emp2");
 		System.out.println(add);
 		
+// It throws an exception because in applicationContext 2 beans are defined but we can add primary bean it means which bean will be inject if 2 beans are there in applicationContext
+		
+		
 	}
 
 }

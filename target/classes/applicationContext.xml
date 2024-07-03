@@ -7,7 +7,7 @@
 	<!--dependency injection by setters-->
 
 	<!-- bean definitions here -->
-	<bean id="address" class="com.spring.spring_core.model.Address">
+	<bean id="add" class="com.spring.spring_core.model.Address">
 		<property name="city" value="GZB" />
 		<property name="state" value="UP" />
 		<property name="country" value="India" />
@@ -15,14 +15,14 @@
 
 	</bean>
 
-	<bean id="emp" class="com.spring.spring_core.model.Employee" autowire="byName">
+	<bean id="emp" class="com.spring.spring_core.model.Employee" autowire="byType">
 		<property name="name" value="Alok" />
 		<property name="gender" value="Male" />
 		
 
 	</bean>
 
-	<bean id="add2" class="com.spring.spring_core.model.Address">
+	<bean id="add2" class="com.spring.spring_core.model.Address" primary="true">
 		<property name="city" value="Noida" />
 		<property name="state" value="Uttar Pradesh" />
 		<property name="country" value="Bharat"/>
