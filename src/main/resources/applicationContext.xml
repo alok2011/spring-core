@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-                 <!--dependency injection by setters-->
+	<!--dependency injection by setters-->
 
-    <!-- bean definitions here -->
-    <!--<bean id="add" class="com.spring.spring_core.model.Address">
-		<property name="city" value="GZB"/>
-		<property name="state" value="UP"/>
-		<property name="country" value="India"/>
-		<property name="pinCode" value="202020"/>
-		
+	<!-- bean definitions here -->
+	<bean id="address" class="com.spring.spring_core.model.Address">
+		<property name="city" value="GZB" />
+		<property name="state" value="UP" />
+		<property name="country" value="India" />
+		<property name="pinCode" value="202020" />
+
 	</bean>
-	
-	<bean id="emp" class="com.spring.spring_core.model.Employee">
-		<property name="name" value="Alok"/>
-		<property name="gender" value="Male"/>
-		<property name="address" ref="add"/>
-				
-	</bean>-->
-	
-	
-	<!--dependency injection by Constructor-->
-	
+
+	<bean id="emp" class="com.spring.spring_core.model.Employee" autowire="byName">
+		<property name="name" value="Alok" />
+		<property name="gender" value="Male" />
+		
+
+	</bean>
+
 	<bean id="add2" class="com.spring.spring_core.model.Address">
+		<property name="city" value="Noida" />
+		<property name="state" value="Uttar Pradesh" />
+		<property name="country" value="Bharat"/>
+		<property name="pinCode" value="202021"/>
+
+
+	</bean>
+
+
+	<!--dependency injection by Constructor-->
+
+	<!--<bean id="add2" class="com.spring.spring_core.model.Address">
 		<constructor-arg name="city" value="Amroha"/>
 		<constructor-arg name="state" value="UP"/>
 		<constructor-arg name="country" value="INDIA"/>
@@ -71,8 +79,7 @@
 				</map>
 		</constructor-arg>
 		
-		</bean>
-	
-	
-	
+		</bean>-->
+
+
 </beans>
