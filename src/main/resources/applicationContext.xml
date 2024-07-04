@@ -8,18 +8,48 @@
 
 	<!-- bean definitions here -->
 	
-	<bean id="address" class="com.spring.spring_core.model.Address" scope="prototype">
-		<property name="city" value="Prayagraj"></property>
+	<!--<bean id="address" class="com.spring.spring_core.model.Address">
+		<property name="city" value="Kanpur"></property>
 		<property name="state" value="UP"></property>
 		<property name="country" value="India"></property>
-		<property name="pinCode" value="222222"></property>
-	</bean>
+		<property name="pinCode" value="111111"></property>
+	</bean>-->
+	
+	
 
-	<bean id="emp" class="com.spring.spring_core.model.Employee">
-		<property name="name" value="Sujeet Verma"></property>
-		<property name="gender" value="Male"></property>
-		<lookup-method name="applyAddress" bean="address"/>
+	<bean id="dbSingleton" class="com.spring.spring_core.model.DatabaseSingleton" factory-method="getInstance">
+		
+		
 	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	<!--dependency injection by Constructor-->
 
