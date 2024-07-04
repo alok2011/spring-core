@@ -11,17 +11,10 @@ public class App
 
 	public static void main(String[] args) 
 	{
+		//Inner Bean
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Employee e1 = (Employee)ioc.getBean("emp");
-	//	e1.setName("Gaurav");
+		Employee e1 = (Employee)ioc.getBean("emp2");
 		System.out.println(e1);
-		System.out.println(e1.hashCode());
-
-		
-		Employee e2 = (Employee)ioc.getBean("emp");
-		System.out.println(e2);
-		System.out.println(e2.hashCode());
-		
 	}
 
 }
