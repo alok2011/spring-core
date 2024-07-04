@@ -9,6 +9,7 @@
 	<!-- bean definitions here -->
 	
 
+	
 	<bean id="emp" class="com.spring.spring_core.model.Employee" scope="prototype">
 		<property name="name" value="Ramakant"></property>
 		<property name="gender" value="Male"></property>
@@ -21,7 +22,6 @@
 		<property name="gender" value="Male"></property>
 		
 	</bean>
-	
 
 
 	<!--dependency injection by Constructor-->
