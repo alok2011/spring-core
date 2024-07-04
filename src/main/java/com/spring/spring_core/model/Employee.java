@@ -2,7 +2,7 @@ package com.spring.spring_core.model;
 
 
 
-public class Employee 
+abstract public class Employee 
 {
 	private String name;
 	private String gender;
@@ -23,6 +23,8 @@ public class Employee
 		super();
 		System.out.println("Employee.Employee()");
 	}
+	
+	public abstract Address applyAddress();
 
 	public String getName()
 	{

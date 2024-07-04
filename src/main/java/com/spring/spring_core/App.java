@@ -11,9 +11,13 @@ public class App
 
 	public static void main(String[] args) 
 	{
-		//Inner Bean
+	
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Employee e1 = (Employee)ioc.getBean("emp2");
+		Employee e1 = (Employee)ioc.getBean("emp");
+		e1.setAddress(e1.applyAddress()); 
+		Address a1 = e1.applyAddress();
+		Address a2 = e1.applyAddress();
+		System.out.println(a1 == a2);
 		System.out.println(e1);
 	}
 
