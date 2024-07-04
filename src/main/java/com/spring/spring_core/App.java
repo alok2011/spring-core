@@ -12,10 +12,15 @@ public class App
 	public static void main(String[] args) 
 	{
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Employee add = ioc.getBean(Employee.class, "emp2");
-		System.out.println(add);
-		
+		Employee e1 = (Employee)ioc.getBean("emp");
+	//	e1.setName("Gaurav");
+		System.out.println(e1);
+		System.out.println(e1.hashCode());
 
+		
+		Employee e2 = (Employee)ioc.getBean("emp");
+		System.out.println(e2);
+		System.out.println(e2.hashCode());
 		
 	}
 

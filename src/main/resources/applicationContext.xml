@@ -7,34 +7,26 @@
 	<!--dependency injection by setters-->
 
 	<!-- bean definitions here -->
-	<!--<bean id="add" class="com.spring.spring_core.model.Address">
-		<property name="city" value="GZB" />
-		<property name="state" value="UP" />
-		<property name="country" value="India" />
-		<property name="pinCode" value="202020" />
+	
 
-	</bean>
-
-	<bean id="emp" class="com.spring.spring_core.model.Employee" autowire="byType">
-		<property name="name" value="Alok" />
-		<property name="gender" value="Male" />
+	<bean id="emp" class="com.spring.spring_core.model.Employee" scope="prototype">
+		<property name="name" value="Ramakant"></property>
+		<property name="gender" value="Male"></property>
 		
-
+		
 	</bean>
-
-	<bean id="add2" class="com.spring.spring_core.model.Address" primary="true">
-		<property name="city" value="Noida" />
-		<property name="state" value="Uttar Pradesh" />
-		<property name="country" value="Bharat"/>
-		<property name="pinCode" value="202021"/>
-
-
+	
+	<bean id="emp2" class="com.spring.spring_core.model.Employee">
+		<property name="name" value="Hariom"></property>
+		<property name="gender" value="Male"></property>
+		
 	</bean>
--->
+	
+
 
 	<!--dependency injection by Constructor-->
 
-	<bean id="add2" class="com.spring.spring_core.model.Address">
+	<!--<bean id="add2" class="com.spring.spring_core.model.Address">
 		<constructor-arg name="city" value="Amroha" />
 		<constructor-arg name="state" value="UP" />
 		<constructor-arg name="country" value="INDIA" />
@@ -47,7 +39,7 @@
 		<constructor-arg name="gender" value="Male" />
 		
 
-	</bean>
+	</bean>-->
 
 
 </beans>
