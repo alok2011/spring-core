@@ -4,8 +4,8 @@ package com.spring.spring_core;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.spring.spring_core.model.DatabaseSingleton;
-//import com.spring.spring_core.model.Employee;
+
+import com.spring.spring_core.model.Employee;
 
 public class App 
 {
@@ -14,12 +14,12 @@ public class App
 	{
 	
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
-		DatabaseSingleton obj = ioc.getBean(DatabaseSingleton.class,"dbSingleton");
-		System.out.println(obj);
+		Employee bean = ioc.getBean("employee", Employee.class);
+		System.out.println(bean);
 	
-		ApplicationContext ioc2 = new ClassPathXmlApplicationContext("applicationContext.xml");
-		DatabaseSingleton obj1 = (DatabaseSingleton) ioc2.getBean("dbSingleton");
-		System.out.println(obj1);
+	//	ApplicationContext ioc2 = new ClassPathXmlApplicationContext("applicationContext.xml");
+		Employee bean1 = ioc.getBean(Employee.class);
+		System.out.println(bean1);
 		
 	}
 
