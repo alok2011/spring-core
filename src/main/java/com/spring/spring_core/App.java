@@ -17,7 +17,6 @@ public class App
 		Employee bean = ioc.getBean("employee", Employee.class);
 		System.out.println(bean);
 	
-	//	ApplicationContext ioc2 = new ClassPathXmlApplicationContext("applicationContext.xml");
 		Employee bean1 = ioc.getBean(Employee.class);
 		System.out.println(bean1);
 		
