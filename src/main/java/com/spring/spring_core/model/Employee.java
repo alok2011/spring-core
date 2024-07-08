@@ -1,14 +1,26 @@
 package com.spring.spring_core.model;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 
-
-abstract public class Employee 
+public class Employee implements InitializingBean, DisposableBean
 {
 	private String name;
 	private String gender;
+	@Autowired
 	private Address address;
 	
 	
+	public void afterPropertiesSet() throws Exception
+	{
+		System.out.println("Employee.afterPropertiesSet()");
+	}
+	
+	public void destroy() throws Exception
+	{
+		System.out.println("Employee.destroy()");
+	}
 
 	public Employee(String name, String gender, Address address)
 	{
@@ -24,7 +36,16 @@ abstract public class Employee
 		System.out.println("Employee.Employee()");
 	}
 	
-	public abstract Address applyAddress();
+	private void xmlDestroyMethod()
+	{
+		System.out.println("Employee.xmlDestroyMethod()");
+	}
+	
+	private void xmlInitMethod()
+	{
+		System.out.println("Employee.xmlInitMethod()");
+	}
+	
 
 	public String getName()
 	{
