@@ -28,17 +28,6 @@ public class Employee
 		System.out.println("Employee.Employee()");
 	}
 	
-	
-	public void afterPropertiesSet()throws Exception
-	{
-		System.out.println("Employee.afterPropertiesSet()");
-	}
-	
-	public void destroy()throws Exception
-	{
-		System.out.println("Employee.destroy()");
-	}
-
 	public String getName()
 	{
 		return name;
