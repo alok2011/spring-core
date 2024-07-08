@@ -7,69 +7,42 @@ import org.springframework.stereotype.Component;
 @Component
 public class Employee 
 {
-	private String name = "Ayush";
-	private String gender = "Male";
+	private int id;
+	private String name;
+	private int salary;
 	
-	private Address address;
-	
-	
-
-	public Employee(String name, String gender, Address address)
-	{
+	public Employee() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Employee(int id, String name, int salary) {
+		super();
+		this.id = id;
 		this.name = name;
-		this.gender = gender;
-		this.address = address;
+		this.salary = salary;
 	}
-
-	public Employee() 
-	{
-		super();
-		System.out.println("Employee.Employee()");
+	public int getId() {
+		return id;
 	}
-	
-	public String getName()
-	{
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
 		return name;
 	}
-
-	public void setName(String name) 
-	{
-		System.out.println("Employee.setName()");
+	public void setName(String name) {
 		this.name = name;
 	}
-
-	public String getGender() 
-	{
-		return gender;
+	public int getSalary() {
+		return salary;
 	}
-
-	public void setGender(String gender) 
-	{
-		this.gender = gender;
+	public void setSalary(int salary) {
+		this.salary = salary;
 	}
-
-	public Address getAddress() 
-	{
-		return address;
-	}
-
-	@Autowired
-	public void setAddress(Address address) 
-	{
-		this.address = address;
-	}
-
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", gender=" + gender + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
 	}
-
-	
-
-	
-	
-	
 	
 	
 	
