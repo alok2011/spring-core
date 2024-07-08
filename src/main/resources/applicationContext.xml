@@ -8,7 +8,7 @@
 
 	<!-- bean definitions here -->
 	
-	<bean id="address" class="com.spring.spring_core.model.Address" >
+	<bean id="add" class="com.spring.spring_core.model.Address" >
 		<property name="city" value="Prayagraj"></property>
 		<property name="state" value="UP"></property>
 		<property name="country" value="India"></property>
