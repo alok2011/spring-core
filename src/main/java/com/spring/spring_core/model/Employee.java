@@ -2,75 +2,64 @@ package com.spring.spring_core.model;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Employee 
 {
-	private String name = "Ayush";
-	private String gender = "Male";
+	private int id =101;
+	private String name="Alok";
+	private int salary = 10_000;
 	
-	private Address address;
 	
+	private IAddress adddress;
 	
-
-	public Employee(String name, String gender, Address address)
-	{
-		super();
-		this.name = name;
-		this.gender = gender;
-		this.address = address;
-	}
-
 	public Employee() 
 	{
-		super();
 		System.out.println("Employee.Employee()");
 	}
+	public Employee(int id, String name, int salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
 	
-	public String getName()
-	{
+	public Employee(IAddress address) {
+		this.adddress=address;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
 		return name;
 	}
-
-	public void setName(String name) 
-	{
-		System.out.println("Employee.setName()");
+	public void setName(String name) {
 		this.name = name;
 	}
-
-	public String getGender() 
-	{
-		return gender;
+	public int getSalary() {
+		return salary;
 	}
-
-	public void setGender(String gender) 
-	{
-		this.gender = gender;
+	public void setSalary(int salary) {
+		this.salary = salary;
 	}
-
-	public Address getAddress() 
-	{
-		return address;
+	public IAddress getAdddress() {
+		return adddress;
 	}
-
 	@Autowired
-	public void setAddress(Address address) 
-	{
-		this.address = address;
+	@Qualifier("address2")   // if we want to autowire byName then Spring provides @Qualifier Annotation which is the sub tag of @Autowired Annotation
+	public void setAdddress(IAddress adddress) {
+		System.out.println("Employee.setAdddress()");
+		this.adddress = adddress;
 	}
-
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", gender=" + gender + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", adddress=" + adddress + "]";
 	}
-
-	
-
-	
-	
-	
-	
 	
 	
 }
