@@ -3,11 +3,15 @@ package com.spring.spring_core.Dao;
 
 import java.util.List;
 
+import org.springframework.jdbc.core.JdbcTemplate;
+
 import com.spring.spring_core.model.Employee;
+import com.spring.spring_core.model.EmployeeMapper;
+//import com.spring.spring_core.model.EmployeeMapper;
 
 public class EmployeeDao
 {
-	private JDBCType jdbcTemplate;
+	private JdbcTemplate jdbcTemplate;
 
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
@@ -15,7 +19,9 @@ public class EmployeeDao
 	
 	public List<Employee> getAllEmp()
 	{
-		return jdbcTemplate.query("select * from employee", new EmployeeMapper());
+		
+		
+		return jdbcTemplate.query("select * from employee", new EmployeeMapper()) ;
 
 	}
 

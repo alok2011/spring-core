@@ -10,19 +10,19 @@
     
    
 	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-	<property name="url" value="jdbc:mysql://localhost:3306/employee"></property>
+	<property name="url" value="jdbc:mysql://localhost:3306/address"></property>
 	<property name="username" value="root"></property>
 	<property name="password" value="Alok@2001"></property>
 	</bean>
 	
-	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+	<bean id="JT" class="org.springframework.jdbc.core.JdbcTemplate">
 	<property name="dataSource" ref="ds"></property>
 	
 	
 	</bean>
 	
 	<bean id="edao" class="com.spring.spring_core.Dao.EmployeeDao">
-	<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	<property name="jdbcTemplate" ref="JT"></property>
 	
 	
 	</bean>
