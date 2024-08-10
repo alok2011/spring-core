@@ -14,6 +14,8 @@ public class App
 
 	public static void main(String[] args) 
 	{
+		
+//=================This Is Spring JDBC xml Based==========================		
 	
 		ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
 		EmployeeDao edao = app.getBean("edao", EmployeeDao.class);
