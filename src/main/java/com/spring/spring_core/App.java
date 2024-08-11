@@ -18,6 +18,8 @@ public class App
 		Address a1 = e1.applyAddress();
 		Address a2 = e1.applyAddress();
 		System.out.println(a1 == a2);
+//		System.out.println(a1.hashCode());
+//		System.out.println(a2.hashCode());
 		System.out.println(e1);
 	}
 
