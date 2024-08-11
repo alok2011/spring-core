@@ -23,9 +23,9 @@ public class App
 
 		EmployeeDao edao1 = app.getBean(EmployeeDao.class);
 		
-		Employee emp = new Employee(111, "Shankey Tiwari", 98000);
-    	edao1.saveEmployee(emp);
-    	System.out.println("Data Saved Successfully");
+//		Employee emp = new Employee(111, "Shankey Tiwari", 98000);
+//    	edao1.saveEmployee(emp);
+//    	System.out.println("Data Saved Successfully");
 
 //		Employee emp = new Employee(5, "Anurag Gupta", 30000);
 //    	edao1.updateEmployee(emp);
