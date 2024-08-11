@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -43,9 +43,9 @@
 	
 	
 
-	<!--dependency injection by Constructor-->
+	dependency injection by Constructor
 
-	<!--<bean id="add2" class="com.spring.spring_core.model.Address">
+	<bean id="add2" class="com.spring.spring_core.model.Address">
 		<constructor-arg name="city" value="Amroha" />
 		<constructor-arg name="state" value="UP" />
 		<constructor-arg name="country" value="INDIA" />
@@ -58,7 +58,7 @@
 		<constructor-arg name="gender" value="Male" />
 		
 
-	</bean>-->
+	</bean>
 
 
-</beans>
+</beans> -->
