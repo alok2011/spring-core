@@ -13,7 +13,7 @@ public class App
 	{
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
 		Employee e1 = (Employee)ioc.getBean("emp");
-	//	e1.setName("Gaurav");
+//		e1.setName("Gaurav");
 		System.out.println(e1);
 		System.out.println(e1.hashCode());
 

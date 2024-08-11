@@ -8,19 +8,26 @@
 
 	<!-- bean definitions here -->
 	
-
+	<bean id="add" class="com.spring.spring_core.model.Address">
+	<property name="city" value="Indore"/>
+	<property name="state" value="MP"/>
+	<property name="country" value="India"/>
+	<property name="pinCode" value= "221303"/>
+	
+	
+	</bean>
 	
 	<bean id="emp" class="com.spring.spring_core.model.Employee" scope="prototype">
 		<property name="name" value="Ramakant"></property>
 		<property name="gender" value="Male"></property>
-		
+		<property name="address" ref="add"/>
 		
 	</bean>
 	
 	<bean id="emp2" class="com.spring.spring_core.model.Employee">
 		<property name="name" value="Hariom"></property>
 		<property name="gender" value="Male"></property>
-		
+		<property name="address" ref="add"/>
 	</bean>
 
 
