@@ -13,8 +13,13 @@ public class App
 	{
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
 		Employee add = ioc.getBean(Employee.class, "emp2");
-		add.setName("Aalok");
+//		add.setName("Harshit");
 		System.out.println(add);
+		
+	
+		
+		
+
 		
 	}
 

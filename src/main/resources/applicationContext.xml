@@ -8,7 +8,7 @@
                  <!--dependency injection by setters-->
 
     <!-- bean definitions here -->
-    <!--<bean id="add" class="com.spring.spring_core.model.Address">
+   <!--  <bean id="add" class="com.spring.spring_core.model.Address">
 		<property name="city" value="GZB"/>
 		<property name="state" value="UP"/>
 		<property name="country" value="India"/>
@@ -21,25 +21,25 @@
 		<property name="gender" value="Male"/>
 		<property name="address" ref="add"/>
 				
-	</bean>-->
+	</bean> -->
 	
 	
 	<!--dependency injection by Constructor-->
 	
 	<bean id="add2" class="com.spring.spring_core.model.Address">
-		<constructor-arg name="city" value="Amroha"/>
-		<constructor-arg name="state" value="UP"/>
-		<constructor-arg name="country" value="INDIA"/>
-		<constructor-arg name="pinCode" value="221303"/>
-		
+	<constructor-arg name="city" value="Amroha" />
+	<constructor-arg name="state" value="UP" />
+	<constructor-arg name="country" value="INDIA" />
+	<constructor-arg name="pinCode" value="221303" />
+
 	</bean>
-	
+
 	<bean id="emp2" class="com.spring.spring_core.model.Employee">
-		<constructor-arg name="name" value="Alok"/>
-		<constructor-arg name="gender" value="Male"/>
-		<constructor-arg name="address" ref="add2"/>
-		
-		</bean>
+		<constructor-arg name="name" value="Hariom" />
+		<constructor-arg name="gender" value="Male" />
+		<constructor-arg name="address" ref="add2" />
+
+	</bean>
 	
 	
 	
