@@ -4,7 +4,6 @@ package com.spring.spring_core;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-
 import com.spring.spring_core.model.Employee;
 
 public class App 
@@ -19,6 +18,7 @@ public class App
 	
 		Employee bean1 = ioc.getBean(Employee.class);
 		System.out.println(bean1);
+		
 		
 	}
 
