@@ -19,7 +19,7 @@ public class App
 	
 		ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
 		EmployeeDao edao = app.getBean("edao", EmployeeDao.class);
-		Employee emp = new Employee(4, "Khushi", 80000);
+		Employee emp = new Employee(1, "Khushi", 80000);
     	edao.saveEmployee(emp);
     	System.out.println("save successfully");
 

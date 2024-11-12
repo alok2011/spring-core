@@ -3,8 +3,6 @@ package com.spring.spring_core.model;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.swing.tree.RowMapper;
-
 public class EmployeeMapper implements org.springframework.jdbc.core.RowMapper<Employee>
 {
 	@Override
